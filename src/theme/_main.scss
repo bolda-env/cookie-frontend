@@ -1,0 +1,156 @@
+// Vars
+$dg: grid;
+$df: flex;
+$primary-color-1: #4dd54d;
+$primary-color-2: #5e815e;
+$primary-color-3: #9aad9a;
+$primary-color-4: #4dd54d8e;
+
+.main-wrapper {
+  height: 100%;
+  display: $dg;
+  grid-template-columns: minmax(200px, auto) 1fr minmax(200px, auto);
+  column-gap: 0.5rem;
+}
+
+.navigate {
+  display: $df;
+  justify-content: center;
+  overflow-y: auto;
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    line-height: 3em;
+    width: 100%;
+
+    li {
+      font-size: 1.2em;
+      padding: 0.087rem 0;
+
+      a {
+        padding: 0 1.5rem;
+        text-decoration: none;
+        display: $df;
+        color: $primary-color-3;
+        text-transform: capitalize;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+        transition: 1s;
+
+        i {
+          color: rgb(78, 78, 78);
+          padding: 0 0.5rem;
+        }
+
+        .nav-name {
+          color: rgb(119, 119, 119);
+        }
+      }
+
+      a:hover {
+        box-shadow: 1px 1px 10px #eee;
+      }
+    }
+  }
+}
+
+.post {
+  padding: 0 5rem;
+  // background-color: red;
+
+  .post-text-area {
+    display: $df;
+    margin: 0.5rem 0 0;
+    overflow: hidden;
+    filter: drop-shadow(-1px 1px 2px #e2e2e2);
+    flex-shrink: 0;
+
+    textarea {
+      border: 2px solid #4dd54d3a;
+      height: 70px;
+      flex-grow: 1;
+      font-size: 1.2em;
+      padding: 0.5rem 1.5rem;
+      font-family: "Baloo Bhai";
+      outline: none;
+      resize: none;
+      line-height: 25px;
+      border-bottom-left-radius: 1em;
+      border-top-left-radius: 1rem;
+    }
+
+    .btn {
+      border: none;
+      background-color: $primary-color-1;
+      font-weight: 800;
+      text-transform: capitalize;
+      color: #fff;
+      padding: 0 1rem;
+      border-bottom-right-radius: 1rem;
+      border-top-right-radius: 1rem;
+      cursor: pointer;
+    }
+  }
+
+  .post-dialog {
+    border-radius: 1rem;
+    flex-grow: 1;
+    height: calc((100% - 70px));
+    margin: 1rem 0 0 0;
+    padding: 0 1rem;
+
+    .post-wrapper {
+      border: 2px solid #f0f0f0;
+      border-radius: 1.3rem;
+      padding: 1.5rem;
+      display: $df;
+      margin: 1rem 0;
+
+      .avatar {
+        padding: 0 1rem 0 0;
+      }
+
+      img {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+        cursor: pointer;
+      }
+
+      .post-child {
+        line-height: 1.8rem;
+      }
+    }
+  }
+}
+
+.profile-dialog {
+  display: $df;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.6rem 0;
+
+  div {
+    text-align: center;
+    line-height: 20px;
+
+    p {
+      font-weight: bolder;
+      cursor: pointer;
+    }
+
+    span {
+      color: #bbbbbb;
+    }
+  }
+
+  img {
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+}

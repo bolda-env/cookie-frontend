@@ -1,0 +1,139 @@
+// Vars
+$dg: grid;
+$df: flex;
+$primary-color-1: #4dd54d;
+$primary-color-2: #5e815e;
+$primary-color-3: #9aad9a;
+$primary-color-4: #4dd54d8e;
+
+.wrapper {
+  display: $dg;
+  grid-template-columns: repeat(3 1fr);
+  justify-content: center;
+  grid-row-gap: 0.8rem;
+  min-width: 50%;
+}
+
+// Cookie Header
+#cookie-header {
+  display: $df;
+  margin: 4rem 0 2rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+
+  div {
+    padding: 0 0.07rem;
+    h1 {
+      text-transform: lowercase;
+      color: $primary-color-1;
+    }
+  }
+}
+
+.entry-caption {
+  margin: 1rem 0 0;
+  text-align: center;
+  h1 {
+    text-transform: capitalize;
+    font-weight: 300;
+  }
+  h1 + p {
+    color: $primary-color-3;
+  }
+}
+
+.form-container {
+  form {
+    div {
+      position: relative;
+      i {
+        position: absolute;
+        padding: 0.7rem 0.5rem 0.5rem;
+        text-align: center;
+        color: $primary-color-3;
+      }
+      input {
+        border-radius: 0.3rem;
+        width: 100%;
+        margin: 0.2rem 0;
+        padding: 0.8rem 0.8rem 0.8rem 1.8rem;
+        font-size: 1em;
+        border: 2px solid #cacaca;
+      }
+
+      input:focus {
+        border: none;
+        outline: 2px solid $primary-color-1;
+        filter: drop-shadow(-1px 1px 2px #4dd54d81);
+      }
+
+      input::placeholder {
+        color: rgb(184, 182, 182);
+        font-size: 0.87em;
+      }
+    }
+  }
+
+  .term-condition {
+    display: $df;
+    align-items: center;
+    margin: 1rem 0 0.2rem;
+
+    input[type="checkbox"] {
+      flex-shrink: 1;
+      margin-right: 0.5rem;
+      width: auto;
+      filter: invert(19%) hue-rotate(18deg) brightness(1.7);
+    }
+  }
+
+  p {
+    text-align: center;
+    a {
+      text-decoration: none;
+      color: $primary-color-1;
+    }
+  }
+  p a:hover {
+    text-decoration: underline;
+  }
+
+  form + p {
+    color: $primary-color-3;
+  }
+
+  .btn {
+    display: $df;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem 0;
+
+    button {
+      display: inline-block;
+      padding: 0.5rem 2rem;
+      border-radius: 0.3rem;
+      border: none;
+      outline: none;
+      text-transform: capitalize;
+      background-color: $primary-color-1;
+      color: #fff;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    button:disabled {
+      background-color: $primary-color-4;
+    }
+  }
+}
+
+.error-alert {
+  background-color: rgba(255, 125, 125, 0.5);
+  color: rgb(255, 80, 80);
+  border-radius: 0.3rem;
+  padding: 0 0.5rem;
+  margin: 0.2rem 0;
+  font-weight: bold;
+  max-width: auto;
+}

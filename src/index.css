@@ -1,0 +1,336 @@
+@font-face {
+  font-family: "Baloo Bhai";
+  src: url("./font/baloobhai.ttf");
+}
+@font-face {
+  font-family: "Qlassik Regular";
+  src: url("./font/qlassik_regular.ttf");
+}
+@font-face {
+  font-family: "Qlassik Bold";
+  src: url("./font/qlassik_bold.ttf");
+}
+.main-wrapper {
+  height: 100%;
+  display: grid;
+  grid-template-columns: minmax(200px, auto) 1fr minmax(200px, auto);
+  column-gap: 0.5rem;
+}
+
+.navigate {
+  display: flex;
+  justify-content: center;
+  overflow-y: auto;
+}
+.navigate ul {
+  list-style-type: none;
+  padding: 0;
+  line-height: 3em;
+  width: 100%;
+}
+.navigate ul li {
+  font-size: 1.2em;
+  padding: 0.087rem 0;
+}
+.navigate ul li a {
+  padding: 0 1.5rem;
+  text-decoration: none;
+  display: flex;
+  color: #9aad9a;
+  text-transform: capitalize;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  transition: 1s;
+}
+.navigate ul li a i {
+  color: rgb(78, 78, 78);
+  padding: 0 0.5rem;
+}
+.navigate ul li a .nav-name {
+  color: rgb(119, 119, 119);
+}
+.navigate ul li a:hover {
+  box-shadow: 1px 1px 10px #eee;
+}
+
+.post {
+  padding: 0 5rem;
+}
+.post .post-text-area {
+  display: flex;
+  margin: 0.5rem 0 0;
+  overflow: hidden;
+  filter: drop-shadow(-1px 1px 2px #e2e2e2);
+  flex-shrink: 0;
+}
+.post .post-text-area textarea {
+  border: 2px solid rgba(77, 213, 77, 0.2274509804);
+  height: 70px;
+  flex-grow: 1;
+  font-size: 1.2em;
+  padding: 0.5rem 1.5rem;
+  font-family: "Baloo Bhai";
+  outline: none;
+  resize: none;
+  line-height: 25px;
+  border-bottom-left-radius: 1em;
+  border-top-left-radius: 1rem;
+}
+.post .post-text-area .btn {
+  border: none;
+  background-color: #4dd54d;
+  font-weight: 800;
+  text-transform: capitalize;
+  color: #fff;
+  padding: 0 1rem;
+  border-bottom-right-radius: 1rem;
+  border-top-right-radius: 1rem;
+  cursor: pointer;
+}
+.post .post-dialog {
+  border-radius: 1rem;
+  flex-grow: 1;
+  height: calc(100% - 70px);
+  margin: 1rem 0 0 0;
+  padding: 0 1rem;
+}
+.post .post-dialog .post-wrapper {
+  border: 2px solid #f0f0f0;
+  border-radius: 1.3rem;
+  padding: 1.5rem;
+  display: flex;
+  margin: 1rem 0;
+}
+.post .post-dialog .post-wrapper .avatar {
+  padding: 0 1rem 0 0;
+}
+.post .post-dialog .post-wrapper img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+.post .post-dialog .post-wrapper .post-child {
+  line-height: 1.8rem;
+}
+
+.profile-dialog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.6rem 0;
+}
+.profile-dialog div {
+  text-align: center;
+  line-height: 20px;
+}
+.profile-dialog div p {
+  font-weight: bolder;
+  cursor: pointer;
+}
+.profile-dialog div span {
+  color: #bbbbbb;
+}
+.profile-dialog img {
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 789px) {
+  #cookie-header {
+    margin: 3rem 0 2rem;
+  }
+  .btn button {
+    width: 100%;
+  }
+  .main-wrapper {
+    display: block;
+  }
+  .navigate {
+    background-color: #4dd54d;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    bottom: 0;
+  }
+  .navigate ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  .navigate ul i {
+    color: #fff !important;
+  }
+  .navigate ul .nav-name {
+    display: none;
+  }
+  .profile-dialog {
+    display: none;
+  }
+  .post {
+    padding: 0 1rem;
+  }
+  .post .post-dialog {
+    padding: 0 !important;
+    margin-bottom: 1.5rem;
+  }
+  .post .post-wrapper {
+    padding: 0.5rem !important;
+    flex-direction: column;
+    align-items: center;
+  }
+  .post .post-wrapper img {
+    width: 30px;
+    height: 30px;
+  }
+  .post .post-wrapper .post-child {
+    font-size: 1em;
+    line-height: 15px;
+  }
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3 1fr);
+  justify-content: center;
+  grid-row-gap: 0.8rem;
+  min-width: 50%;
+}
+
+#cookie-header {
+  display: flex;
+  margin: 4rem 0 2rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+}
+#cookie-header div {
+  padding: 0 0.07rem;
+}
+#cookie-header div h1 {
+  text-transform: lowercase;
+  color: #4dd54d;
+}
+
+.entry-caption {
+  margin: 1rem 0 0;
+  text-align: center;
+}
+.entry-caption h1 {
+  text-transform: capitalize;
+  font-weight: 300;
+}
+.entry-caption h1 + p {
+  color: #9aad9a;
+}
+
+.form-container form div {
+  position: relative;
+}
+.form-container form div i {
+  position: absolute;
+  padding: 0.7rem 0.5rem 0.5rem;
+  text-align: center;
+  color: #9aad9a;
+}
+.form-container form div input {
+  border-radius: 0.3rem;
+  width: 100%;
+  margin: 0.2rem 0;
+  padding: 0.8rem 0.8rem 0.8rem 1.8rem;
+  font-size: 1em;
+  border: 2px solid #cacaca;
+}
+.form-container form div input:focus {
+  border: none;
+  outline: 2px solid #4dd54d;
+  filter: drop-shadow(-1px 1px 2px rgba(77, 213, 77, 0.5058823529));
+}
+.form-container form div input::placeholder {
+  color: rgb(184, 182, 182);
+  font-size: 0.87em;
+}
+.form-container .term-condition {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0 0.2rem;
+}
+.form-container .term-condition input[type=checkbox] {
+  flex-shrink: 1;
+  margin-right: 0.5rem;
+  width: auto;
+  filter: invert(19%) hue-rotate(18deg) brightness(1.7);
+}
+.form-container p {
+  text-align: center;
+}
+.form-container p a {
+  text-decoration: none;
+  color: #4dd54d;
+}
+.form-container p a:hover {
+  text-decoration: underline;
+}
+.form-container form + p {
+  color: #9aad9a;
+}
+.form-container .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+.form-container .btn button {
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  border-radius: 0.3rem;
+  border: none;
+  outline: none;
+  text-transform: capitalize;
+  background-color: #4dd54d;
+  color: #fff;
+  font-weight: 800;
+  cursor: pointer;
+}
+.form-container .btn button:disabled {
+  background-color: rgba(77, 213, 77, 0.5568627451);
+}
+
+.error-alert {
+  background-color: rgba(255, 125, 125, 0.5);
+  color: rgb(255, 80, 80);
+  border-radius: 0.3rem;
+  padding: 0 0.5rem;
+  margin: 0.2rem 0;
+  font-weight: bold;
+  max-width: auto;
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  font-family: "Baloo Bhai";
+  line-height: 35px;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,64 @@
+@media screen and (max-width: 789px) {
+  #cookie-header {
+    margin: 3rem 0 2rem;
+  }
+
+  .btn {
+    button {
+      width: 100%;
+    }
+  }
+
+  // Home Devices Setting
+  .main-wrapper {
+    display: block;
+  }
+
+  .navigate {
+    background-color: #4dd54d;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    bottom: 0;
+
+    ul {
+      display: flex;
+      justify-content: space-around;
+
+      i {
+        color: #fff !important;
+      }
+
+      .nav-name {
+        display: none;
+      }
+    }
+  }
+
+  .profile-dialog {
+    display: none;
+  }
+
+  .post {
+    padding: 0 1rem;
+
+    .post-dialog {
+      padding: 0 !important;
+      margin-bottom: 1.5rem;
+    }
+    .post-wrapper {
+      padding: 0.5rem !important;
+      flex-direction: column;
+      align-items: center;
+
+      img {
+        width: 30px;
+        height: 30px;
+      }
+      .post-child {
+        font-size: 1em;
+        line-height: 15px;
+      }
+    }
+  }
+}
